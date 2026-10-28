@@ -1,7 +1,7 @@
 /*
-Author : Théo Läderach
+Auteur : Théo Läderach
 Date : 01.10.2026
-Description : jeu du simon
+Description : jeu du Simon
 */
 
 int BLUE_LED_PIN = 2;
@@ -60,11 +60,11 @@ void setup() {
 }
 
 void loop() {
-  // attente que le bouton bleu soit appuyé pour démarrer le jeu
+  // Attente que le bouton bleu soit appuyé pour démarrer le jeu
   while (!Blue_btn.fell()){
     Blue_btn.update();
-    // pour éviter les répétitions, utiliser le temps que le joueur met à réfléchir pour avoir la couleur la plus aléatoire possible
-    // PS : je me suis basé sur le système d'aléatoire de TempleOs
+    // Pour éviter les répétitions, utiliser le temps que le joueur met à réfléchir afin d'obtenir la couleur la plus aléatoire possible.
+    // PS : je me suis basé sur le système d'aléatoire de TempleOS.
     nextColor = random(1,5);
   };
 
@@ -80,7 +80,7 @@ void loop() {
   victory();
 
   delay(1000);
-  //initialisation de la partie
+  // Initialisation de la partie
   sequence_index = 0;
   sequence[sequence_index] = nextColor;
   show_sequence(300);
@@ -90,7 +90,7 @@ void loop() {
   // Boucle principale du jeu
   while (!failed){
 
-    // actucalisation de l'état des boutons
+    // Actualisation de l'état des boutons
     Blue_btn.update();
     Yellow_btn.update();
     Red_btn.update();
@@ -98,7 +98,7 @@ void loop() {
 
     current_color = 0;
 
-    // vérifie si un des boutons est appuié
+    // Vérifie si l'un des boutons est appuyé
     if (Blue_btn.fell()){
       current_color = BLUE;
       led(BLUE);
@@ -129,12 +129,12 @@ void loop() {
       }
       if (current_index == (sequence_index+1)){
         if (sequence_index >= 30) {
-          // si on dépasse la limite de sequence max, victoire
+          // Si on dépasse la longueur maximale de la séquence, victoire.
           delay(DURATION*2);
           failed = true;
           victory();
         }else{
-          // si on est pas encore à la fin, on afficher les prochaine sequence
+          // Si on n'est pas encore à la fin, on affiche la prochaine séquence.
           current_index = 0;
           delay(DURATION*2);
           sequence_index ++;
@@ -182,7 +182,7 @@ void led(int color){
 
 void error(){
   /*
-  Allume toutes les LED et emet le son d'erreur
+  Allume toutes les LED et émet le son d'erreur.
   */
   for (int ledPin = 2; ledPin < 6; ledPin++){
     digitalWrite(ledPin,HIGH);
@@ -199,7 +199,7 @@ void error(){
 
 void victory(){
   /*
-  Allume toutes les LED et emet le son de victoire
+  Allume toutes les LED et émet le son de victoire.
   */
   for (int _ = 0; _ < 3; _++){
     for (int ledPin = 2; ledPin < 6; ledPin++){

@@ -13,7 +13,7 @@ Voici la documentation répondant à ces critères :
 * Le diagramme de flux du code [voir →](#diagramme-de-flux)
 * Une conclusion concernant les objectifs atteints et non atteints, ainsi que les améliorations possibles [voir →](#conclusion)
 
-Ce projet entier a été écrit à la main, par moi, Théo Läderach, avec uniquement la corréction de l'orthographe par une ia.
+Ce projet entier a été écrit à la main par moi, Théo Läderach, avec uniquement la correction de l'orthographe par une IA.
 
 ## Explication du schéma électrique
 
@@ -28,10 +28,10 @@ Ce projet entier a été écrit à la main, par moi, Théo Läderach, avec uniqu
 
 ## Comment je me suis pris pour créer ce projet
 
-Pour commencer, j’ai placé les boutons sur la carte à bandes afin d’avoir une idée de l’emplacement du reste des composants.
+Pour commencer, j’ai placé les boutons sur la carte à bandes afin d’avoir une idée de l’emplacement des autres composants.
 Je les ai ensuite reliés avec les fils, dont j’ai retiré la couche isolante afin qu’ils puissent conduire le courant.
 
-Une fois tous les fils du montage placés, j’ai continué avec les résistances, que j’ai d’abord positionnées et soudées, puis raccourcies.
+Une fois tous les fils du montage placés, j’ai continué avec les résistances, que j’ai d’abord positionnées et soudées, puis dont j’ai raccourci les pattes.
 J’ai ensuite installé le support du buzzer, puis les LED.
 Pour commencer, j’ai enfoncé les LED, soudé leurs pattes, puis coupé celles-ci.
 

@@ -14,7 +14,7 @@ Voici mon programme avec sa [documentation technique](doc.md).
 ### 2. Ouvrir le fichier [projet-simon.ino](projet-simon.ino)
 Utilisez un IDE capable de compiler le code pour un Arduino *(par exemple : [Arduino IDE](https://docs.arduino.cc/software/ide/))*.
 ### 3. Installer les bibliothèques
-Pour faire fonctionner le code, vous aurez besoin de la librairie suivante et devrez l’installer dans votre IDE :
+Pour faire fonctionner le code, vous aurez besoin de la bibliothèque suivante et devrez l’installer dans votre IDE :
 
   * [Bounce2](https://github.com/thomasfredericks/Bounce2)
 
